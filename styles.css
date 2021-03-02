@@ -140,7 +140,7 @@ width: 100px;
 }
 
 .column-2.box li{
-    /* list-style:circle; */
+    list-style:circle;
 }
 
 ul.li-style{
