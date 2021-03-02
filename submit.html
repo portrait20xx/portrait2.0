@@ -1,0 +1,95 @@
+<!--PYTHON, cd /directory, python3 -m http.server, number localhost:number-->
+<!--https://github.com/mrdoob/three.js/blob/master/examples/webgl_materials_normalmap_object_space.html-->
+<!--https://threejs.org/examples/?q=obj#webgl_loader_obj-->
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" integrity="sha512-yNJzAsg5JyP91u+sLHlUDULMBd3hmEiVkYeeN1cQBKaLZ7EyT6oH2u5THNIRM2Fu6VKcZJv+F/QAp1h/qzy9Ow==" crossorigin="anonymous"></script>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link href="//db.onlinewebfonts.com/c/e82ff865254c4f5e8f11f460957f1a14?family=Orelo+SemiWide+Hair" rel="stylesheet" type="text/css"/>
+<link href="//db.onlinewebfonts.com/c/fb3ddfb68f7942d3a38bb6b63f96ac89?family=Basis+Grotesque" rel="stylesheet" type="text/css"/>
+<html lang="en">
+	<head>
+		<title>Portrait 20XX</title>
+        <link rel="stylesheet" href="styles.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<!--<link type="text/css" rel="stylesheet" href="main.css">-->
+	</head>
+	<body>
+        <div class = "header-title-nav-wrapper">
+            <!--Title-->
+            <div class = "header-title-logo">
+                <a href="Index.html">Portrait 20XX</a>
+            </div>
+            <!--Nav-->
+            <div class = "header-nav">
+                <div class ="header-nav-wrapper">
+                    <nav class ="header-nav-list">
+                        <div class="header-nav-item">
+                            <a href="about.html">ABOUT</a>
+                        </div>
+                        <div class="header-nav-item">
+                            <a href="howItWorks.html">HOW IT WORKS</a>
+                        </div>
+                        <div class="header-nav-item">
+                            <a href="Submit.html" class ="button">SUBMIT</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="about-container">
+            <div class="column-1 box">
+                <p style ="font-size:18px; font-family: Basis Grotesque; line-height: 175%;">
+                    <sup>Purpose of the Project:</sup> <br> Translate human reaction, expression, activity and behavior in a virtual world/online space into a new form of portrait to represent identity. Understand the possibility of speculative portraits that can be used in multiple scenarios in the future. <br><br>
+                    <sup>Details of the Project:</sup> <br> In this demo, you will be asked to answer a few questions and submit your photo and google account data. <br><br>
+                    <sup>Risk:</sup> <br> Results from this demo will add to the public presentation inside and outside of ArtCenter. There are no known risks associated with your participation in this demo or research, as your name and data will be completely anonymous.  Your data will be collected and it will be visible on this website.<br><br>
+                </p>
+            </div>
+            <div class="column-2 box">
+                   <p>
+                    <sup>Confidentiality:</sup> <br> The researcher respects your privacy. Confidentiality of your participation records will be strictly maintained. There will be total confidentiality: No personal identifiable information, such as your name, will be collected. Your name will never be publicly shared and the researcher will never publicly share the data you shared. Students' names or any other identifying factors will be removed from publication and gallery or replaced with auto generated names.
+                    The researcher will not grade or evaluate any of the above observation elements or results. The researcher gathers data and explores it only during the assigned time of week5 - week7. All recordings or submissions will be kept confidential and all records will be destroyed after the final thesis presentation. However, portraits out of submitted data will be kept, without any identifying information, for further use in areas such as design competitions.
+                    </p>
+                
+                </div>
+        </div>
+        <p style ="text-align: center; color: white;">Please submit after reading the disclaimer above closely.</p>
+            <div class="form-container">
+                <form action ="mailto:slee165@inside.artcenter.edu" method="post" enctype="text/plain">
+                <!-- <form action="/action_page.php"> -->
+                    <label for="name">Name (First, Last Name)</label>
+                    <input type="text" id="name" name="name" placeholder="If you'd like to stay anonymous, please submit under anonymous">
+                
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email" name="email" placeholder="Email Address">
+            
+                    <label for="consent">I have read the consent.</label>
+                    <select id="consent" name="country">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+            
+                    <label for="subject">Please attach the link to download your dataset.</label>
+                    <textarea id="subject" name="subject" placeholder="Please attach the link to download your dataset." style="height:200px"></textarea>
+            
+                    <div class ="submit-button"><input type="submit" value="Submit"></div>
+                </form>
+            </div>
+            <div class="footer-container">
+                <div class="flex-row footer-details">
+                    <div class = "item-bordered item-left">
+                        <div class ="footer-small-text">CONTACT</div>
+                        <div class = "footer-paragraph"><a href="#">slee165@inside.artcenter.edu</a></div>
+                    </div>
+                    <div class = "item-bordered item-right">
+                        <div class ="footer-small-text">MADE WITH</div>
+                        <div class = "footer-paragraph">tears by Soo Jin for Thesis 2021</div>
+                    </div>
+                </div>
+            </div>
+	</body>
+</html>
