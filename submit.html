@@ -1,6 +1,19 @@
 <!--PYTHON, cd /directory, python3 -m http.server, number localhost:number-->
 <!--https://github.com/mrdoob/three.js/blob/master/examples/webgl_materials_normalmap_object_space.html-->
 <!--https://threejs.org/examples/?q=obj#webgl_loader_obj-->
+<?php 
+if(isset($_POST['submit'])){
+    $to = "slee165@oinside.artcenter.edu"; // this is your Email address
+    $from = $_POST['email']; //
+    $name = $_POST['name'];
+    $consent = "consent";
+    $subject = "Copy of your form submission";
+
+    mail($to,$name,$consent,$subject);
+    mail($from,$consent,$subject); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you. I will contact you shortly.";
+    }
+?>
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" integrity="sha512-yNJzAsg5JyP91u+sLHlUDULMBd3hmEiVkYeeN1cQBKaLZ7EyT6oH2u5THNIRM2Fu6VKcZJv+F/QAp1h/qzy9Ow==" crossorigin="anonymous"></script>
@@ -59,7 +72,7 @@
         </div>
         <p style ="text-align: center; color: white;">Please submit after reading the disclaimer above closely.</p>
             <div class="form-container">
-                <form action ="mailto:slee165@inside.artcenter.edu" method="post" enctype="text/plain">
+                <form action =" " method="post" enctype="text/plain">
                 <!-- <form action="/action_page.php"> -->
                     <label for="name">Name (First, Last Name)</label>
                     <input type="text" id="name" name="name" placeholder="If you'd like to stay anonymous, please submit under anonymous">
@@ -68,7 +81,7 @@
                     <input type="text" id="email" name="email" placeholder="Email Address">
             
                     <label for="consent">I have read the consent.</label>
-                    <select id="consent" name="country">
+                    <select id="consent" name="consent">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
@@ -76,7 +89,7 @@
                     <label for="subject">Please attach the link to download your dataset.</label>
                     <textarea id="subject" name="subject" placeholder="Please attach the link to download your dataset." style="height:200px"></textarea>
             
-                    <div class ="submit-button"><input type="submit" value="Submit"></div>
+                    <div class ="submit-button"><input type="submit" value="submit" name ="submit"></div>
                 </form>
             </div>
             <div class="footer-container">
