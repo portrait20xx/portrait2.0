@@ -1,17 +1,6 @@
 <!--PYTHON, cd /directory, python3 -m http.server, number localhost:number-->
 <!--https://github.com/mrdoob/three.js/blob/master/examples/webgl_materials_normalmap_object_space.html-->
 <!--https://threejs.org/examples/?q=obj#webgl_loader_obj-->
-<?php 
-    $to = "slee165@oinside.artcenter.edu"; // this is your Email address
-    $from = $_POST['email']; //
-    $name = $_POST['name'];
-    $consent = "consent";
-    $subject = "Copy of your form submission";
-
-    mail($to,$name,$consent,$subject);
-    mail($from,$consent,$subject); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you. I will contact you shortly.";
-?>
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" integrity="sha512-yNJzAsg5JyP91u+sLHlUDULMBd3hmEiVkYeeN1cQBKaLZ7EyT6oH2u5THNIRM2Fu6VKcZJv+F/QAp1h/qzy9Ow==" crossorigin="anonymous"></script>
@@ -30,6 +19,17 @@
 		<!--<link type="text/css" rel="stylesheet" href="main.css">-->
 	</head>
 	<body>
+    <?php 
+        $to = "slee165@oinside.artcenter.edu"; // this is your Email address
+        $from = $_POST['email']; //
+        $name = $_POST['name'];
+        $consent = "consent";
+        $subject = "Copy of your form submission";
+    
+        mail($to,$name,$consent,$subject);
+        mail($from,$consent,$subject); // sends a copy of the message to the sender
+        echo "Mail Sent. Thank you. I will contact you shortly.";
+    ?>
         <div class = "header-title-nav-wrapper">
             <!--Title-->
             <div class = "header-title-logo">
@@ -70,7 +70,7 @@
         </div>
         <p style ="text-align: center; color: white;">Please submit after reading the disclaimer above closely.</p>
             <div class="form-container">
-                <form action =" " method="post" enctype="text/plain">
+                <form action ="submit.php" method="post" enctype="text/plain">
                 <!-- <form action="/action_page.php"> -->
                     <label for="name">Name (First, Last Name)</label>
                     <input type="text" id="name" name="name" placeholder="If you'd like to stay anonymous, please submit under anonymous">
