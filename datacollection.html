@@ -11,6 +11,7 @@
         alert("Please carefully review the following terms and conditions before submitting the form below. ");
     }
 </script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 <link href="//db.onlinewebfonts.com/c/e82ff865254c4f5e8f11f460957f1a14?family=Orelo+SemiWide+Hair" rel="stylesheet" type="text/css"/>
@@ -52,21 +53,39 @@
                 </div>
             </div>
         </div>
+        <div class ="grid-container how">
+            <div class="grid-item">
+                <div class="box-move">DATA</div>
+                <div class="subtitle how">COLLECT DATA FROM YOU</div>
+            </div>
+            <div class="grid-item">
+                <div class="box-notmove">RULE</div>
+                <div class="subtitle how">TRANSLATE IT THROUGH THE RULE</div>
+            </div>
+            <div class="grid-item">
+                <div class="subtitle how" style= "font-size:80px;">=</div>
+            </div>
+            <div class="grid-item">
+                <div class="box-notmove-gold">PORTRAIT</div>
+                <div class="subtitle how">GENERATE THE PORTRAIT</div>
+            </div>
+        </div>
+        <div class ="grid-container how" style="color: white; width: 60%;line-height: 150%;">Portrait 20XX is processed with two anonymous steps. As the first process, data collection is queried prior to operation (portrait generation). This part is meant to dig into the participant’s files/data and translate them through a certain set of rules. In this process, participants need to log in to Google Takeout using their personal account and provide their data by following the instructions provided. This may include personal, identifiable information. </div>
         <div class="about-container">
-            <div class="column-1 box" style ="color:#A2845E;font-family:Basis Grotesque;">
-                <p><b>What organization or individual conducted this project?</b></p>
-                <p style="color: white;">This project is run by Soojin, a graduate candidate from ArtCenter College of Design. In this project, Soojin proposes a platform to explore viewers’ online presence and increase people’s understanding and awareness of data use, ownership, capture, privacy and sharing. In this website, she shines a spotlight on obvious things on the internet that people don’t normally think about, the amount and nature of online data. With a new portrait of our data in the project, she aims to question what influences us and how we are perceived inside and outside of cyberspace.</p>
-                <p><b>This website is run by which of the following organizations?</b></p>
-                <p style="color: white;">The website is managed by Soojin Lee. If you have any questions, experience any problems exploring the website or require any further information please feel free to contact.</p>
-                <p><b>What is the purpose of this website?</b></p>
-                <p style="color: white;">Through the website, viewers are requested to view the mirrored data closely, as the portraits reflect a participant’s data. This experience makes viewers think about the significance  of their identity and voluntarily submitting their data to generate a visual interpretation of it in a portrait form. Portraits from this project show you the hidden and visible sides of someone, and this makes viewers gain a deeper appreciation of their data capture, ownership, privacy, and sharing by exploring portraits. </p>
+            <div class="column-1 box">
+                <p style="font-size:72px; color:#A2845E; text-align: center; font-style: Orelo SemiWide Hair;">Instruction</p><br>
+                <div style ="font-size: 16px; font-family: Basis Grotesque; color:#A2845E; text-transform: uppercase; line-height: 100%;">Do NOT provide your files or personal information without carefully reading the consent agreement.</div> 
             </div>
-            <div class="column-2 box">
-                <p style = "color:#A2845E;"><b>What is Portrait 20XX and how did it start?</b></p>
-                <p>Portrait 20XX does not take for granted or assume that the face and body are the only loci of online identity. Instead, it proposes that online data and information can be just as expressive and important to representing ourselves in online space. The collection of data and information shows what influences you. Instead of just focusing on appearance, my work explores ways of embodying things recorded or registered online such as internet history and computer data into a human portrait, as these digital data are being created by users and tracked unconsciously through the devices people use.
-                <br><br>The outbreak of the coronavirus and subsequent substitution of our physical space with virtual space has accelerated our progress through the current information age. During this time, we are becoming an amalgamation of online behavior and data in cyberspace. Portrait 20XX spotlights identity within data sharing and privacy and interprets it into new portraits, reflecting our online behavior and history. 
-                <br><br>The portraits become a window to the true representation that we have missed or couldn't see by just looking at ourselves in a mirror. Portraits of our data in this project aim to question what influences us and how we are perceived inside and outside of cyberspace. </p>          
-            </div>
+            <div class="column-2 box" style = "line-height: 150%;">
+                   <p><ul class="li-style">
+                    <li>Log in to Google Takeout with your personal account or the account that you want to use to create a portrait.</li>
+                    <li>Under "Create a New Export", press "Deselect all" and scroll down to select only "My Activity" and "Drive".</li>
+                    <li>For "My Activity", click on that, and then click "Multiple formats". Choose the file format as "JSON".</li>
+                    <li>Once this is done, you will have to select “export once” and choose the .zip delivery format.</li>
+                    <li>Wait for the copy of the content you have selected to be generated. It will take more than a few hours. When your file is generated, you will receive a notification email inviting you to download it.</li>
+                    <li>Send files to me with the "archive_browser.html" file which is stored in the same directory of Takeout.</li>  
+                    </ul></p>
+                </div>
         </div>
         <div class="footer-container">
             <div class="flex-row footer-details">

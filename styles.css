@@ -3,6 +3,13 @@
 @import url(//db.onlinewebfonts.com/c/fb3ddfb68f7942d3a38bb6b63f96ac89?family=Basis+Grotesque);
 @font-face {font-family: "Basis Grotesque"; src: url("//db.onlinewebfonts.com/t/fb3ddfb68f7942d3a38bb6b63f96ac89.eot"); src: url("//db.onlinewebfonts.com/t/fb3ddfb68f7942d3a38bb6b63f96ac89.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/fb3ddfb68f7942d3a38bb6b63f96ac89.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/fb3ddfb68f7942d3a38bb6b63f96ac89.woff") format("woff"), url("//db.onlinewebfonts.com/t/fb3ddfb68f7942d3a38bb6b63f96ac89.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/fb3ddfb68f7942d3a38bb6b63f96ac89.svg#Basis Grotesque") format("svg"); }
 
+.mySlides {
+    display:none;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+    transform: translate(50%, 0%);}
+
 html, body{
     font-family: "Basis Grotesque";
     font-size:18px;
@@ -25,7 +32,96 @@ canvas {
 
 p{
     /* padding-bottom: 60px; */
-    line-height: 175%;
+    font-family: "Basis Grotesque";
+    line-height: 150%;
+}
+
+/*POP UP ON LOAD*/
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter:alpha(opacity=70);
+    -moz-opacity:0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    z-index: 100;
+    display: none;
+}
+
+.cnt223 a{
+    text-decoration: none;
+}
+
+.popup{
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    position: fixed;
+    z-index: 101;
+    text-align: center;
+}
+
+.cnt223{
+    font-family: "Basis Grotesque";;
+    min-width: 600px;
+    width: 600px;
+    min-height: 150px;
+    margin: 100px auto;
+    background: #f3f3f3;
+    position: relative;
+    z-index: 103;
+    padding: 15px 35px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #000;
+}
+
+.cnt223 p{
+    clear: both;
+        color: #555555;
+        /* text-align: justify; */
+        font-size: 20px;
+        font-family: sans-serif;
+}
+
+.cnt223 p a{
+    color: #A2845E;
+    font-weight: bold;
+}
+.cnt223 .x{
+    float: right;
+    height: 35px;
+    left: 22px;
+    position: relative;
+    top: -25px;
+    width: 34px;
+}
+.cnt223 .x:hover{
+    cursor: pointer;
+}
+
+
+.alert {
+    padding: 20px;
+    background-color: #A2845E;
+    color: white;
+    text-align: center;
+}
+  
+.closebtn {
+    margin-left: 15px;
+    float: right;
+    font-size: 30px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.closebtn:hover {
+    color: black;
 }
 
 /*header*/
@@ -56,7 +152,7 @@ p{
     padding-left: 2vw;
     flex-grow: 1;
     flex-shrink: 1;
-    letter-spacing: 2px;
+    /* letter-spacing: 1px; */
 }
 
 .header-nav-list{
@@ -125,9 +221,9 @@ a:any-link{
 .column-1 {
     flex-shrink: 0; /* shrinks to 0 to apply 50% width*/
     flex-basis: 50%;
-    font-size:46px;
+    /* font-size:46px; */
     font-family: "Orelo SemiWide Hair";
-    line-height: 125%;
+    line-height: 150%;
     color:white;
   }
 
@@ -135,11 +231,11 @@ a:any-link{
 width: 100px;
   }
 
-.column-2{
-    line-height: 150%;
+.column-2.box li{
+    list-style:circle;
 }
 
-.column-2.box li{
+.column-1.box li{
     list-style:circle;
 }
 
@@ -147,13 +243,13 @@ ul.li-style{
     list-style-position: outside;
 }
 
-.box {
+.box{
     padding: 10px;
     margin: 1rem;
     /* background-color: blue; */
 }
 
-.how {
+.how{
     font-size:18px;
     font-family: "Basis Grotesque";
     line-height: 150%;
@@ -208,6 +304,15 @@ ul.li-style{
     /* padding-bottom: 2.5vw; */
   }
 
+  .index-container {
+    width: 85%;
+    margin: auto;
+    grid-row-gap: 50px;
+    grid-template-columns: auto auto auto auto;
+    /* padding: 10px; */
+    padding-top:2.5vw;
+    /* padding-bottom: 2.5vw; */
+  }
 .grid-container.how{
     padding-top:4.5vw;
     padding-bottom: 6vw;
@@ -459,6 +564,7 @@ label{
 }
 
 .submit-button{
+    margin-top:60px;
     width: 100%;
     text-align: center;
 }

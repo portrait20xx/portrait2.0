@@ -6,6 +6,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" integrity="sha512-yNJzAsg5JyP91u+sLHlUDULMBd3hmEiVkYeeN1cQBKaLZ7EyT6oH2u5THNIRM2Fu6VKcZJv+F/QAp1h/qzy9Ow==" crossorigin="anonymous"></script>
 <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script>
+function myFunction1() {
+    alert("Please carefully review the following terms and conditions before submitting the form below. ");
+}
+</script>
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 <link href="//db.onlinewebfonts.com/c/e82ff865254c4f5e8f11f460957f1a14?family=Orelo+SemiWide+Hair" rel="stylesheet" type="text/css"/>
@@ -19,6 +24,9 @@
 		<!--<link type="text/css" rel="stylesheet" href="main.css">-->
 	</head>
 	<body>
+        <div class ="alert" ><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>Caution!</strong> There are multiple confirmation steps on this page. Do NOT submit if you do not understand or accept the agreement.
+        </div>
         <div class = "header-title-nav-wrapper">
             <!--Title-->
             <div class = "header-title-logo">
@@ -29,13 +37,19 @@
                 <div class ="header-nav-wrapper">
                     <nav class ="header-nav-list">
                         <div class="header-nav-item">
-                            <a href="about.html">ABOUT</a>
+                            <a href="about.html">About</a>
                         </div>
                         <div class="header-nav-item">
-                            <a href="howitworks.html">HOW IT WORKS</a>
+                            <a href="datacollection.html">Data Collection</a>
                         </div>
                         <div class="header-nav-item">
-                            <a href="submit.html" class ="button">SUBMIT</a>
+                            <a href="portraitgeneration.html">Portrait Generation</a>
+                        </div>
+                        <div class="header-nav-item">
+                            <a href="archive.html">Archive</a>
+                        </div>
+                        <div class="header-nav-item">
+                            <a href="submit.html" class ="button" onclick="myFunction1()">SUBMIT</a>
                         </div>
                     </nav>
                 </div>
@@ -66,17 +80,33 @@
                 
                     <label for="email">Email Address</label>
                     <input type="text" id="email" name="email" placeholder="Email Address">
-            
-                    <label for="consent">I have read the consent.</label>
+                    
+                    <label for="consent"> I have read the consent. <br><sup>*By checking YES, you accept our waivers and conditions and that you have read our data use policy.</sup>
+                    </label><br>
+                    <input type="checkbox" id="consent_check" name="consent_check" value="consent_check">
+                    <label for="consent_check"> YES </label><br>
+                    <input type="checkbox" id="consent_check" name="consent_check" value="consent_check">
+                    <label for="consent_check"> NO </label>
+                    <br><br>
+                    <label for="consent"> I will let portrait 20XX to view my data and share it publicly in any form. <br><sup>*By checking here, you accept that your portrait is published online.</sup></label><br>
+                    <input type="checkbox" id="consent_check" name="consent_check" value="consent_check">
+                    <label for="consent_check"> YES </label><br>
+                    <input type="checkbox" id="consent_check" name="consent_check" value="consent_check">
+                    <label for="consent_check"> NO </label>
+
+                    <!-- <label for="consent">I have read the consent.</label>
                     <select id="consent" name="consent">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
-                    </select>
-            
+                    </select> -->
+                    <br>
+                    <br>
                     <label for="subject">Please attach the link to download your dataset.</label>
-                    <textarea id="subject" name="subject" placeholder="Please attach the link to download your dataset." style="height:200px"></textarea>
-            
+                    <textarea id="subject" name="subject" placeholder="Please accept our agreements before continuing." style="height:140px"></textarea>
+                    <label for = "name">*Please understand that answers for following questions may change the look of the portrait. Please reach out to the project guide regarding any questions and concerns before submitting your agreements and answers.</name>
+
                     <div class ="submit-button"><input type="submit" value="SUBMIT" name ="submit"></div>
+                    
                 </form>
             </div>
             <div class="footer-container">

@@ -6,6 +6,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" integrity="sha512-yNJzAsg5JyP91u+sLHlUDULMBd3hmEiVkYeeN1cQBKaLZ7EyT6oH2u5THNIRM2Fu6VKcZJv+F/QAp1h/qzy9Ow==" crossorigin="anonymous"></script>
 <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script>
+    function myFunction1() {
+        alert("Please carefully review the following terms and conditions before submitting the form below. ");
+    }
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 <link href="//db.onlinewebfonts.com/c/e82ff865254c4f5e8f11f460957f1a14?family=Orelo+SemiWide+Hair" rel="stylesheet" type="text/css"/>
@@ -18,7 +24,37 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<!--<link type="text/css" rel="stylesheet" href="main.css">-->
 	</head>
+    <style>
+    </style>
 	<body>
+        <script type='text/javascript'>
+            $(function(){
+            var overlay = $('<div id="overlay"></div>');
+            overlay.show();
+            overlay.appendTo(document.body);
+            $('.popup').show();
+            $('.close').click(function(){
+            $('.popup').hide();
+            overlay.appendTo(document.body).remove();
+            return false;
+            });
+            
+            
+            $('.x').click(function(){
+            $('.popup').hide();
+            overlay.appendTo(document.body).remove();
+            return false;
+            });
+            });
+        </script>
+        <div class='popup'>
+            <div class='cnt223'>
+            <h1>Welcome!</h1>
+            <p>This project is about understanding you and your online data better, and visualizing what Google and other services on the internet know about you. It gives you a deeper perspective on your online actions and what personal data and identifying information about you is available by producing visual representation.
+            <br><br>The people who choose to participate and provide their data will get this deeper understanding and awareness of their online data that you may not be aware of otherwise. This will open participants eyes to what data is available to online organisations. It gives a deeper appreciation and understanding of your digital footprint, your identity. If you'd like to continue and follow the steps to know more about how your online data represents you, please hit the enter button below.             <br><br><a href='' class='close'>ENTER</a>
+            </p>
+            </div>
+        </div>
         <div class = "header-title-nav-wrapper">
             <!--Title-->
             <div class = "header-title-logo">
@@ -29,44 +65,51 @@
                 <div class ="header-nav-wrapper">
                     <nav class ="header-nav-list">
                         <div class="header-nav-item">
-                            <a href="about.html">ABOUT</a>
+                            <a href="about.html">About</a>
                         </div>
                         <div class="header-nav-item">
-                            <a href="howitworks.html">HOW IT WORKS</a>
+                            <a href="datacollection.html">Data Collection</a>
                         </div>
                         <div class="header-nav-item">
-                            <a href="submit.html" class ="button">SUBMIT</a>
+                            <a href="portraitgeneration.html">Portrait Generation</a>
+                        </div>
+                        <div class="header-nav-item">
+                            <a href="archive.html">Archive</a>
+                        </div>
+                        <div class="header-nav-item">
+                            <a href="submit.html" class ="button" onclick="myFunction1()">SUBMIT</a>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
-        <div class="grid-container"> 
-            <div class="grid-item">
-                <a href = "profile1.html"><img class ="profile" src="modelsimage/profile2.png" alt="profile1" ></a> <div class="subtitle">profile<sup>1</sup></div>
-            </div>
-            <div class="grid-item">
-                <a href = "profile2.html"><img class ="profile" src="modelsimage/profile1.png" alt="profile2" ></a> <div class="subtitle">profile<sup>2</sup></div>
-            </div>
-            <div class="grid-item">
-                <a href = "profile3.html"><img class ="profile" src="modelsimage/profile3.png" alt="profile3" ></a> <div class="subtitle">profile<sup>3</sup></div>
-            </div>
-            <div class="grid-item">
-                <a href = "profile4.html"><img class ="profile" src="modelsimage/profile4.png" alt="profile4" ></a> <div class="subtitle">profile<sup>4</sup></div>
-            </div>
-            <div class="grid-item">
-                <a href = "profile5.html"><img class ="profile" src="modelsimage/profile5.png" alt="profile5" ></a> <div class="subtitle">profile<sup>5</sup></div>
-            </div>
-            <div class="grid-item">
-                <a href = "profile6.html"><img class ="profile" src="modelsimage/profile6.png" alt="profile5" ></a> <div class="subtitle">profile<sup>6</sup></div>
-            </div>
-            <!-- <div class="grid-item">
-                <img class ="profile" src="modelsimage/profile3.png" alt="profile3" > <div class="subtitle">profile<sup>6</sup></div>
-            </div>
-            <div class="grid-item">
-                <img class ="profile" src="modelsimage/profile3.png" alt="profile3" > <div class="subtitle">profile<sup>7</sup></div>
-            </div> -->
+        <div class="index-container"> 
+        <div class="w3-content w3-section" style="width:45%;">
+            <img class="mySlides" src="modelsimage/profile2.png" style="width:100%">
+            <img class="mySlides" src="modelsimage/profile3.png" style="width:100%">
+            <img class="mySlides" src="modelsimage/profile1.png" style="width:100%">
+            <img class="mySlides" src="modelsimage/profile4.png" style="width:100%">
+            <img class="mySlides" src="modelsimage/profile5.png" style="width:100%">
+            <img class="mySlides" src="modelsimage/profile6.png" style="width:100%">
         </div>
+        <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+            </script>
+        <!-- <img class ="profile" src="modelsimage/profile2.png" alt="profile1" style = "width: 50%;"></a><div class="subtitle">profile<sup>1</sup> -->
+            <p style="text-align: center"><sup>THE PORTRAIT ON THIS PAGE IS CREATED FROM PARTICIPANT’S DATA. The participant agreed to share data and acknowledged that their data reflects their identity. </sup></p></div>
         <div class="footer-container">
             <div class="flex-row footer-details">
                 <div class = "item-bordered item-left">

@@ -6,6 +6,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" integrity="sha512-yNJzAsg5JyP91u+sLHlUDULMBd3hmEiVkYeeN1cQBKaLZ7EyT6oH2u5THNIRM2Fu6VKcZJv+F/QAp1h/qzy9Ow==" crossorigin="anonymous"></script>
 <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script>
+    function myFunction1() {
+        alert("Please carefully review the following terms and conditions before submitting the form below. ");
+    }
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 <link href="//db.onlinewebfonts.com/c/e82ff865254c4f5e8f11f460957f1a14?family=Orelo+SemiWide+Hair" rel="stylesheet" type="text/css"/>
@@ -19,6 +25,38 @@
 		<!--<link type="text/css" rel="stylesheet" href="main.css">-->
 	</head>
 	<body>
+        <script type='text/javascript'>
+            $(function(){
+            var overlay = $('<div id="overlay"></div>');
+            overlay.show();
+            overlay.appendTo(document.body);
+            $('.popup').show();
+            $('.close').click(function(){
+            $('.popup').hide();
+            overlay.appendTo(document.body).remove();
+            return false;
+            });
+            
+            
+            $('.x').click(function(){
+            $('.popup').hide();
+            overlay.appendTo(document.body).remove();
+            return false;
+            });
+            });
+        </script>
+        <div class='popup'>
+            <div class='cnt223'>
+            <h1>How It Works</h1>
+            <p>Every part of this project is processed anonymously and can be queried prior to operation. However, this project is meant to dig into your files/data, and reveal both the hidden and visible sides of you. This may include personal, identifiable information. The project requires the individual to submit their data after reviewing and agreeing to the terms, conditions and consent. To continue, please read the instructions carefully and follow each step.
+            <br><br> Do NOT provide your files or personal information without carefully reading the consent agreement.
+            <br><br><a href='' class='close'>ACCEPT</a>
+            </p>
+            </div>
+        </div>
+        <div class ="alert" ><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>Caution!</strong> Since this  project deals with data capture, use, ownership. Privacy and sharing, there are multiple confirmation steps over the website.
+        </div>
         <div class = "header-title-nav-wrapper">
             <!--Title-->
             <div class = "header-title-logo">
@@ -35,7 +73,7 @@
                             <a href="howitworks.html">HOW IT WORKS</a>
                         </div>
                         <div class="header-nav-item">
-                            <a href="submit.html" class ="button">SUBMIT</a>
+                            <a href="submit.html" class ="button" onclick="myFunction1()">SUBMIT</a>
                         </div>
                     </nav>
                 </div>
