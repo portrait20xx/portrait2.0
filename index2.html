@@ -6,6 +6,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" integrity="sha512-yNJzAsg5JyP91u+sLHlUDULMBd3hmEiVkYeeN1cQBKaLZ7EyT6oH2u5THNIRM2Fu6VKcZJv+F/QAp1h/qzy9Ow==" crossorigin="anonymous"></script>
 <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script src="http://threejs.org/build/three.min.js"></script>
+<link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+
 <script>
     function myFunction1() {
         alert("Please carefully review the following terms and conditions before submitting the form below. ");
@@ -24,6 +27,31 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<!--<link type="text/css" rel="stylesheet" href="main.css">-->
 	</head>
+    <style>
+        body {
+            font-family: Monospace;
+            background-color: #fff;
+            margin: 0px;
+            overflow: hidden;
+        }
+        
+        #canvas {
+            background-color: #000;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 0px;
+            top: 10px;
+            left: 100px;
+        }
+        
+        .border {
+            padding:10px; 
+            margin:10px;
+        }
+        
+    </style>
 	<body>
         <div class = "header-title-nav-wrapper">
             <!--Title-->
@@ -38,13 +66,13 @@
                             <a href="about.html">About</a>
                         </div>
                         <div class="header-nav-item">
-                            <a href="Datacollection.html">Data Collection</a>
+                            <a href="datacollection.html">Data Collection</a>
                         </div>
                         <div class="header-nav-item">
-                            <a href="Portraitgeneration.html">Portrait Generation</a>
+                            <a href="portraitgeneration.html">Portrait Generation</a>
                         </div>
                         <div class="header-nav-item">
-                            <a href="Archive.html">Archive</a>
+                            <a href="archive.html">Archive</a>
                         </div>
                         <div class="header-nav-item">
                             <a href="submit.html" class ="button" onclick="myFunction1()">SUBMIT</a>
@@ -79,6 +107,7 @@
                 <img class ="profile" src="modelsimage/profile3.png" alt="profile3" > <div class="subtitle">profile<sup>7</sup></div>
             </div> -->
         </div>
+        <p><sup>The portrait on this page is created from Profile 1’s data. I am not sharing any personal information about the subject for Profile 1. However, visitors can explore the result of their donation by clicking and rotating it. Within the interactive experience, I expect you to view the mirrored data closely. I also hope you reflect on your data and think about its significance to your identity. </sup></p>
         <div class="footer-container">
             <div class="flex-row footer-details">
                 <div class = "item-bordered item-left">

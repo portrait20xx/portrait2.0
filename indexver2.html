@@ -25,6 +25,34 @@
 		<!--<link type="text/css" rel="stylesheet" href="main.css">-->
 	</head>
 	<body>
+        <script type='text/javascript'>
+            $(function(){
+            var overlay = $('<div id="overlay"></div>');
+            overlay.show();
+            overlay.appendTo(document.body);
+            $('.popup').show();
+            $('.close').click(function(){
+            $('.popup').hide();
+            overlay.appendTo(document.body).remove();
+            return false;
+            });
+            
+            
+            $('.x').click(function(){
+            $('.popup').hide();
+            overlay.appendTo(document.body).remove();
+            return false;
+            });
+            });
+        </script>
+        <div class='popup'>
+            <div class='cnt223'>
+            <h1>Welcome!</h1>
+            <p>This project is about understanding you and your online data better, and visualizing what Google and other services on the internet know about you. It gives you a deeper perspective on your online actions and what personal data and identifying information about you is available by producing visual representation.
+            <br><br>The people who choose to participate and provide their data will get this deeper understanding and awareness of their online data that you may not be aware of otherwise. This will open participants eyes to what data is available to online organisations. It gives a deeper appreciation and understanding of your digital footprint, your identity. If you'd like to continue and follow the steps to know more about how your online data represents you, please hit the enter button below.             <br><br><a href='' class='close'>Enter</a>
+            </p>
+            </div>
+        </div>
         <div class = "header-title-nav-wrapper">
             <!--Title-->
             <div class = "header-title-logo">
@@ -38,13 +66,13 @@
                             <a href="about.html">About</a>
                         </div>
                         <div class="header-nav-item">
-                            <a href="Datacollection.html">Data Collection</a>
+                            <a href="datacollection.html">Data Collection</a>
                         </div>
                         <div class="header-nav-item">
-                            <a href="Portraitgeneration.html">Portrait Generation</a>
+                            <a href="portraitgeneration.html">Portrait Generation</a>
                         </div>
                         <div class="header-nav-item">
-                            <a href="Archive.html">Archive</a>
+                            <a href="archive.html">Archive</a>
                         </div>
                         <div class="header-nav-item">
                             <a href="submit.html" class ="button" onclick="myFunction1()">SUBMIT</a>
@@ -79,6 +107,7 @@
                 <img class ="profile" src="modelsimage/profile3.png" alt="profile3" > <div class="subtitle">profile<sup>7</sup></div>
             </div> -->
         </div>
+        <p><sup class ="width: 80%;">THE PORTRAIT ON THIS PAGE IS CREATED FROM PARTICIPANT’S DATA. The participant agreed to share data and acknowledged that their data reflects their identity. </sup></p>
         <div class="footer-container">
             <div class="flex-row footer-details">
                 <div class = "item-bordered item-left">
